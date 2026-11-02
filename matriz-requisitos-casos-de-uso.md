@@ -1,8 +1,6 @@
 # Matriz de ligação entre requisitos e casos de uso
 
-Esta matriz liga os requisitos funcionais da planilha [Levantamento de Requisitos](requisitos/levantamento-de-requisitos.xlsx) aos casos de uso que aparecem no [diagrama de casos de uso](diagramas/casos-de-uso-frigus.png). Ela ajuda a localizar no desenho quais requisitos cada ação atende.
-
-Os IDs RF continuam sendo a referência principal. Quando um requisito descreve campos, regras ou comportamento transversal, ele aparece ligado ao caso de uso mais próximo e isso está explicado nas observações.
+Esta matriz apresenta a rastreabilidade entre os requisitos funcionais da planilha [Levantamento de Requisitos](requisitos/levantamento-de-requisitos.xlsx) e os casos de uso do [diagrama de casos de uso](diagramas/casos-de-uso-frigus.png). Requisitos que definem campos ou regras de uma ação estão associados ao caso de uso correspondente.
 
 ## Conta e grupo
 
@@ -87,18 +85,16 @@ Os IDs RF continuam sendo a referência principal. Quando um requisito descreve 
 | Bloquear links maliciosos | RF56 — Identificação de links maliciosos |
 | Rastrear alterações por usuário | RF61 — Identificação de alterações |
 
-## Ligações que precisam aparecer com mais clareza no diagrama
+## Requisitos que podem ser detalhados no diagrama
 
-- **RF03 — Tipo de conta:** está associado ao cadastro, mas o diagrama não mostra explicitamente a escolha entre conta doméstica e comércio. Se essa distinção for importante para a avaliação, adicionar o caso de uso `Selecionar tipo de conta` ligado a `Cadastrar conta`.
-- **RF24 — Indicador visual de validade:** foi ligado a `Controlar validade`, mas o desenho não mostra as cores ou a apresentação visual. Pode ser detalhado como `Visualizar indicador de validade`.
-- **RF57 — Plano doméstico** e **RF58 — Plano comércio:** o desenho distingue funcionalidades domésticas e comerciais, mas não mostra seleção, contratação ou gestão de planos. Não há ligação direta com os casos de uso atuais.
+- **RF03 — Tipo de conta:** está associado ao cadastro. A escolha entre conta doméstica e comércio pode ser representada como `Selecionar tipo de conta`, ligada a `Cadastrar conta`.
+- **RF24 — Indicador visual de validade:** está associado a `Controlar validade`. A apresentação visual das cores pode ser detalhada como `Visualizar indicador de validade`.
+- **RF57 — Plano doméstico** e **RF58 — Plano comércio:** o diagrama distingue funcionalidades domésticas e comerciais, mas não representa a seleção ou gestão de planos. A inclusão desses casos depende de essas ações fazerem parte do escopo do sistema.
 
-## Casos do desenho sem RF correspondente na planilha
+## Casos de uso complementares
 
-O diagrama também tem `Filtrar por preferência alimentar` e `Salvar receita favorita`. Esses casos não têm um requisito funcional próprio entre RF01 e RF61 na planilha atual. Para manter a documentação consistente, o grupo pode criar RFs para eles ou confirmar que são ideias fora do escopo desta versão.
+O diagrama também apresenta `Filtrar por preferência alimentar` e `Salvar receita favorita`. A planilha atual não define requisitos funcionais próprios para essas ações. Caso façam parte do escopo, recomenda-se registrá-las na planilha de requisitos.
 
-## Como ler esta matriz
+## Critério de associação
 
-Esta matriz registra a relação entre as funções desenhadas e os IDs da planilha; ela não altera a imagem do diagrama. Se a professora pedir que os IDs apareçam no próprio desenho, use os códigos RF como etiquetas junto aos casos de uso correspondentes, mantendo esta matriz como referência detalhada.
-
-Os diagramas de atividade detalham dois fluxos dessa mesma lista de requisitos: [importação por nota fiscal](diagramas/atividade-importacao-por-nota-fiscal.png) e [registro de saída do estoque](diagramas/atividade-registro-saida-estoque.png). O segundo destaca RF21, RF29, RF30, RF31 e RF61.
+Cada requisito foi associado ao caso de uso que representa sua ação principal. Requisitos de campos, regras e critérios aparecem junto ao fluxo correspondente, em vez de como ações independentes.
